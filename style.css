@@ -11,6 +11,99 @@
   font-size: 15px;
 }
 
+
+#start{
+  background-color: #100530; 
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 30px;
+}
+
+#start h1{
+  color: white; 
+  font-size: 5em; 
+  text-align: center;
+  padding: 100px 0 40px 0;
+}
+
+#start span{
+  color: #FDA700;
+  font-size: 80px;
+}
+
+#start img{
+  width: 45%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  padding-bottom: 100px;
+}
+
+.page-wrapper{
+  margin: 0 auto;
+  max-width: 1000px;
+  margin-top: 60px;
+}
+
+.wrapper{
+  display: flex;
+  align-items: center;
+}
+
+.transistors-description1{
+  font-size: 2.5em;
+  margin-right: 20px;
+}
+
+.transistors-description1 .on{
+  color: #FDA700;
+  font-size: 35px;
+}
+
+.transistors-description1 .off{
+  color: #9C9C9C;
+  font-size: 35px;
+}
+
+#colors{
+  display: flex;
+}
+
+#colors img{
+  margin-right: 10px;
+}
+
+.transistors-description2{
+  margin: 50px 0 50px 0;
+  font-size: 2.2em;
+}
+
+.transistors-description2 .bold {
+  font-weight: bold;
+  font-size: 32px;
+}
+
+#binary-values{
+  display: flex;
+  justify-content: center;
+}
+
+#binary-values img{
+  margin: 0 15px;
+}
+
+.logic-gates-description{
+  font-size: 2.2em;
+  padding: 50px 0 50px;
+}
+
+
+
 .card {
   margin: 0 auto;
   margin-top: 50px;
@@ -67,4 +160,43 @@
 .card p {
   margin: 10px 0;
   font-size: 1.5em;
+}
+
+
+
+@media screen and (max-width: 768px){
+
+  #start {
+    height: auto;
+    padding: 20px;
+  }
+  
+  #start h1 {
+    font-size: 3em;
+    padding: 50px 0 20px 0;
+  }
+  
+  #start img {
+    width: 80%;
+    padding-bottom: 50px;
+  }
+
+  #colors img{
+    margin-right: 5px;
+    width: 70px;
+  }
+
+  #binary-values img{
+    width: 70px;
+    margin: 0 15px;
+  }
+  
+  .transistors-description1,
+  .transistors-description1 .on,
+  .transistors-description1 .off,
+  .transistors-description2,
+  .transistors-description2 .bold,
+  .logic-gates-description {
+    font-size: 1em;
+  }
 }
