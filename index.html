@@ -9,39 +9,59 @@
   <body>
     <header>
       <div id="start">
-          <h1>LogicGate <span>Explainer</span></h1>
-          <img src="assets/AND_start.png" alt="">
+        <h1>LogicGate <span>Explainer</span></h1>
+        <img src="assets/AND_start.png" alt="" />
       </div>
     </header>
 
-    <section> 
-      <div  class="page-wrapper">
+    <section>
+      <div class="page-wrapper">
         <div class="wrapper">
-          <h3 class="transistors-description1">Dentro de um computador, existem pequenos interruptores chamados transistores, que podem estar <span class="on">ligados</span> ou <span class="off">desligados</span>.</h3>
+          <h3 class="transistors-description1">
+            Dentro de um computador, existem pequenos interruptores chamados transistores, que podem estar <span class="on">ligados</span> ou
+            <span class="off">desligados</span>.
+          </h3>
 
           <div id="colors">
-            <img src="assets/yellow.png" alt="">
-            <img src="assets/gray.svg" alt="">
+            <img src="assets/yellow.png" alt="" />
+            <img src="assets/gray.svg" alt="" />
           </div>
         </div>
 
-        <p class="transistors-description2">Esses transistores são interpretados computacionalmente com o <span class="bold">sistema binário</span> , a linguagem fundamental dos computadores, que os representa com <span class="bold">0 para desligados</span> e <span class="bold">1 para ligados</span>.</p>
+        <p class="transistors-description2">
+          Esses transistores são interpretados computacionalmente com o <span class="bold">sistema binário</span> , a linguagem fundamental dos
+          computadores, que os representa com <span class="bold">0 para desligados</span> e <span class="bold">1 para ligados</span>.
+        </p>
 
-        <div id="binary-values" >
-          <img src="assets/zero.png" alt="">
-          <img src="assets/one.png" alt="">
+        <div id="binary-values">
+          <img src="assets/zero.png" alt="" />
+          <img src="assets/one.png" alt="" />
         </div>
-        
-        <p class="logic-gates-description">As portas lógicas são como blocos de construção dos computadores. Elas aceitam entradas e produzem saídas com base em regras lógicas simples.</p>
+
+        <p class="logic-gates-description">
+          As portas lógicas são como blocos de construção dos computadores. Elas aceitam entradas e produzem saídas com base em regras lógicas
+          simples.
+        </p>
       </div>
     </section>
 
-
     <section>
+      <div class="card" id="card-not">
+        <div class="container-top">
+          <h1>AND</h1>
+          <button type="button" onclick="splitDrawing('not', 2)"><img src="assets/shiftButton.svg" width="40px" alt="" /></button>
+        </div>
+        <div class="container">
+          <div class="table" style="background-image: url('assets/TABLE-NOT_1.png')"></div>
+          <div class="drawing" style="background-image: url('assets/NOT_1.png')"></div>
+        </div>
+        <p class="explanation">Se a entrada for 1, a saída será 0. Se a entrada for 0, a saída será 1.</p>
+      </div>
+
       <div class="card" id="card-and">
         <div class="container-top">
           <h1>AND</h1>
-          <button type="button" onclick="splitDrawing('and')"><img src="assets/shiftButton.svg" width="40px" alt="" /></button>
+          <button type="button" onclick="splitDrawing('and', 4)"><img src="assets/shiftButton.svg" width="40px" alt="" /></button>
         </div>
         <div class="container">
           <div class="table" style="background-image: url('assets/TABLE-AND_1.png')"></div>
@@ -49,8 +69,35 @@
         </div>
         <p class="explanation">A saída igual a 1 somente quando todas as entradas são 1. Se pelo menos uma entrada for 0, a saída será 0.</p>
       </div>
-    </section>
 
+      <div class="card" id="card-or">
+        <div class="container-top">
+          <h1>OR</h1>
+          <button type="button" onclick="splitDrawing('or', 4)"><img src="assets/shiftButton.svg" width="40px" alt="" /></button>
+        </div>
+        <div class="container">
+          <div class="table" style="background-image: url('assets/TABLE-OR_1.png')"></div>
+          <div class="drawing" style="background-image: url('assets/OR_1.png')"></div>
+        </div>
+        <p class="explanation">
+          A saída é igual a 1 se pelo menos uma das entradas for 1. Somente quando ambas as entradas forem 0 é que a saída será 0.
+        </p>
+      </div>
+
+      <div class="card" id="card-xor">
+        <div class="container-top">
+          <h1>OR</h1>
+          <button type="button" onclick="splitDrawing('xor', 4)"><img src="assets/shiftButton.svg" width="40px" alt="" /></button>
+        </div>
+        <div class="container">
+          <div class="table" style="background-image: url('assets/TABLE-XOR_1.png')"></div>
+          <div class="drawing" style="background-image: url('assets/XOR_1.png')"></div>
+        </div>
+        <p class="explanation">
+          A saída é igual a 1 se pelo menos uma das entradas for 1. Somente quando ambas as entradas forem 0 é que a saída será 0.
+        </p>
+      </div>
+    </section>
   </body>
   <script src="scripts.js"></script>
 </html>
