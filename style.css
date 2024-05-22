@@ -8,39 +8,34 @@
   font-optical-sizing: auto;
   font-weight: weight;
   font-style: normal;
+}
+
+html {
   font-size: 15px;
 }
 
-#start {
+header {
   background-color: #100530;
   height: 90vh;
+  max-height: 900px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
-  /* max-width: 1000px; */
-  padding: 30px;
+  padding: 20px;
 }
 
-#start h1 {
-  color: white;
-  font-size: 5em;
-  text-align: center;
-  padding: 100px 0 40px 0;
-}
-
-#start span {
-  color: #fda700;
-  font-size: 80px;
-}
-
-#start img {
-  width: 45%;
+header div {
+  width: 100%;
+  max-width: 700px;
+  height: 100%;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  padding-bottom: 100px;
+}
+
+section {
+  padding: 20px;
 }
 
 .page-wrapper {
@@ -61,20 +56,72 @@
 
 .transistors-description1 .on {
   color: #fda700;
-  font-size: 35px;
+  font-size: 1em;
 }
 
 .transistors-description1 .off {
   color: #9c9c9c;
-  font-size: 35px;
+  font-size: 1em;
 }
 
-#colors {
+.wrapper .container-colors {
   display: flex;
+  min-width: 40%;
+  height: 300px;
 }
 
-#colors img {
-  margin-right: 10px;
+.wrapper .container-colors div {
+  width: 100%;
+  margin: 20px;
+  border-radius: 15px;
+}
+
+#gray-switch {
+  animation: colorOneChange 4s infinite;
+  box-shadow: #9c9c9c 0 0 40px;
+}
+
+@keyframes colorOneChange {
+  0% {
+    background-color: #9c9c9c;
+    box-shadow: #9c9c9c 0 0 40px;
+  }
+  25% {
+    background-color: #fda700;
+    box-shadow: #fda700 0 0 40px;
+  }
+  50% {
+    background-color: #fda700;
+    box-shadow: #fda700 0 0 40px;
+  }
+  75% {
+    background-color: #9c9c9c;
+    box-shadow: #9c9c9c 0 0 40px;
+  }
+}
+
+#yellow-switch {
+  animation: colorTwoChange 4s infinite;
+  box-shadow: #fda700 0 0 40px;
+}
+
+@keyframes colorTwoChange {
+  0% {
+    background-color: #fda700;
+    box-shadow: #fda700 0 0 40px;
+  }
+  25% {
+    background-color: #9c9c9c;
+    box-shadow: #9c9c9c 0 0 40px;
+  }
+  50% {
+    background-color: #9c9c9c;
+    box-shadow: #9c9c9c 0 0 40px;
+  }
+  75% {
+    background-color: #fda700;
+    box-shadow: #fda700 0 0 40px;
+  }
 }
 
 .transistors-description2 {
@@ -84,7 +131,7 @@
 
 .transistors-description2 .bold {
   font-weight: bold;
-  font-size: 32px;
+  font-size: 1em;
 }
 
 #binary-values {
@@ -102,14 +149,10 @@
 }
 
 .card {
-  margin: 0 auto;
+  margin: 150px auto;
   width: fit-content;
   padding: 0 20px;
-}
-
-.card {
   margin-top: 70px;
-  width: 100%;
   max-width: 1000px;
   background-color: #d9d9d9;
   padding: 40px;
@@ -168,38 +211,44 @@
   font-size: 1.5em;
 }
 
-@media screen and (max-width: 768px) {
-  #start {
-    height: auto;
-    padding: 20px;
+@media screen and (max-width: 1000px) {
+  .page-wrapper .wrapper {
+    flex-direction: column;
   }
 
-  #start h1 {
-    font-size: 3em;
-    padding: 50px 0 20px 0;
+  .wrapper .container-colors {
+    width: 100%;
+    height: 200px;
+    max-width: 450px;
   }
 
-  #start img {
-    width: 80%;
-    padding-bottom: 50px;
+  .wrapper .transistors-description1 {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  html {
+    font-size: 10px;
   }
 
-  #colors img {
-    margin-right: 5px;
-    width: 70px;
+  .card {
+    margin: 100px 20px;
+  }
+
+  .card .container {
+    flex-direction: column-reverse;
+  }
+
+  .card .container .table,
+  .card .container .drawing {
+    min-height: 50%;
+    width: 100%;
+    margin-bottom: 10px;
   }
 
   #binary-values img {
     width: 70px;
     margin: 0 15px;
-  }
-
-  .transistors-description1,
-  .transistors-description1 .on,
-  .transistors-description1 .off,
-  .transistors-description2,
-  .transistors-description2 .bold,
-  .logic-gates-description {
-    font-size: 1em;
   }
 }
